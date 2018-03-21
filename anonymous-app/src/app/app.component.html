@@ -1,0 +1,35 @@
+<div id="main-wrapper">
+  <h1>
+    {{ title }}
+  </h1>
+
+  <div id="noteForm">
+    <form (submit)="addNote()">
+      <table>
+        <tr>
+          <td>
+            <h4>Note:</h4>
+          </td>
+          <td>
+            <input style="width: 40rem;" class="form-control form-control-lg" [(ngModel)]="newNote.text" name="text" type="text">
+          </td>
+          <td>
+            <button type="submit" (click)="getHome()" class="btn btn-primary btn-lg">Add Note</button>
+          </td>
+
+        </tr>
+      </table>
+
+    </form>
+  </div>
+  <div id="mainCard" class="card">
+    <div ng-controller="datCtrl" class="card-body" *ngFor="let i of postNotes">
+      <div id="message" class="card" style="width: 45rem; height: 7rem;">
+        <p style="text-align: right" class="card-text">{{i.createdAt | date : "'Noted on:' MMM d, yyyy, h:m:s a"}}</p>
+        <p class="card-text">{{i.text}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
+

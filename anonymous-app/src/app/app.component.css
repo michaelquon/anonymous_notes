@@ -1,0 +1,20 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+#main-wrapper{
+    width: 60%;
+    margin: 0 auto;
+}
+.card{
+    margin-top: 20px;
+}
+p{
+    padding: 5px;
+    display: block;
+}
+#message{
+    margin: 0 auto;
+}
+#mainCard{
+    width: 51.5rem;
+    max-height: 50rem;
+    overflow-y: scroll;
+}
